@@ -61,10 +61,10 @@ En esta segunda práctica del taller aplicaremos lo visto sobre el lenguaje Ruby
 
 6.  Modelá con una jerarquía de clases la siguiente situación: Los usuarios finales de una aplicación tienen los atributos básicos que permiten identificarlos (usuario, clave, email - los que consideres necesarios), y un rol que determina qué operaciones pueden hacer. Los roles posibles son: Lector, Redactor, Director y Administrador. Cada usuario gestiona Documentos según su rol le permita, acorde a las siguientes reglas:
 
-    - Los Lectores pueden ver cualquier Documento que esté marcado como público.
-    - Los Redactores pueden hacer todo lo que los Lectores y además pueden cambiar el contenido de los Documentos que ellos crearon.
-    - Los Directores pueden ver y cambiar el contenido de cualquier documento (público o privado, y creado por cualquier usuario), excepto aquellos que hayan sido borrados.
-    - Los Administradores pueden hacer lo mismo que los directores y además pueden borrar Documentos.
+    -   Los Lectores pueden ver cualquier Documento que esté marcado como público.
+    -   Los Redactores pueden hacer todo lo que los Lectores y además pueden cambiar el contenido de los Documentos que ellos crearon.
+    -   Los Directores pueden ver y cambiar el contenido de cualquier documento (público o privado, y creado por cualquier usuario), excepto aquellos que hayan sido borrados.
+    -   Los Administradores pueden hacer lo mismo que los directores y además pueden borrar Documentos.
 
     Utilizando el siguiente código para la claseDocumento, implementá las clases que consideres necesarias para representar a los usuarios y sus roles, completando la funcionalidad aquí presente:
 
@@ -73,14 +73,14 @@ En esta segunda práctica del taller aplicaremos lo visto sobre el lenguaje Ruby
         attr_accessor :creador, :contenido, :publico, :borrado
 
         def initialize(usuario, publico = true , contenido ='')
-            self .creador = usuario
-            self .publico = publico
-            self .contenido = contenido
-            self .borrado = false
+            self.creador = usuario
+            self.publico = publico
+            self.contenido = contenido
+            self.borrado = false
         end
 
         def borrar
-            self .borrado = true
+            self.borrado = true
         end
 
         def puede_ser_visto_por?(usuario)
@@ -182,11 +182,11 @@ En esta segunda práctica del taller aplicaremos lo visto sobre el lenguaje Ruby
 13. Extendé las clasesTrueClassyFalseClasspara que ambas respondan al método de instancia `opposite`, el cual en cada caso debe retornar el valor opuesto al que recibe la invocación al método. Por ejemplo:
 
     ```rb
-    false .opposite
+    false.opposite
     # => true
-    true .opposite
+    true.opposite
     # => false
-    true .opposite.opposite
+    true.opposite.opposite
     # => true
     ```
 
@@ -222,18 +222,18 @@ En esta segunda práctica del taller aplicaremos lo visto sobre el lenguaje Ruby
         class D
             VALUE ='D'
 
-            def self .value
+            def self.value
                 VALUE
             end
         end
 
         module E
-            def self .value
+            def self.value
                 VALUE
             end
         end
 
-        def self .value
+        def self.value
             VALUE
         end
 
@@ -244,28 +244,28 @@ En esta segunda práctica del taller aplicaremos lo visto sobre el lenguaje Ruby
     end
     ```
 
-    1.¿Qué imprimen cada una de las siguientes sentencias? ¿De dónde está obteniendo el valor?
+    1. ¿Qué imprimen cada una de las siguientes sentencias? ¿De dónde está obteniendo el valor?
 
-        1. puts A.value
-        2. puts A::B.value
-        3. puts C::D.value
-        4. puts C::E.value
-        5. puts F.value
+        1. `puts A.value`
+        2. `puts A::B.value`
+        3. `puts C::D.value`
+        4. `puts C::E.value`
+        5. `puts F.value`
 
     2. ¿Qué pasaría si ejecutases las siguientes sentencias? ¿Por qué?
 
-        1. puts A::value
-        2. puts A. new .value
-        3. puts B.value
-        4. puts C::D.value
-        5. puts C.value
-        6. puts F.superclass.value
+        1. `puts A::value`
+        2. `puts A.new.value`
+        3. `puts B.value`
+        4. `puts C::D.value`
+        5. `puts C.value`
+        6. `puts F.superclass.value`
 
 ---
 
 ## Bloques
 
-15. Escribí un métododa_nil?que reciba un bloque, lo invoque y retorne si el valor de retorno del bloque fue nil. Por ejemplo:
+15. Escribí un métododa_nil? que reciba un bloque, lo invoque y retorne si el valor de retorno del bloque fue nil. Por ejemplo:
 
     ```rb
     da_nil? { }

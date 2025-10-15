@@ -50,6 +50,9 @@ class Usuario
         false
     end
     
+    def to_s
+        return "#{@email} (#{self.class})"
+    end
 end
 
 class Lector < Usuario
@@ -84,3 +87,9 @@ class Administrador < Usuario
         true
     end
 end
+
+lector = Lector.new("Juan", "clave123", "juan@example.com")
+redactor = Redactor.new("Ana", "clave456", "ana@example.com")
+
+puts lector.to_s
+puts redactor.to_s
