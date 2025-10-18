@@ -106,7 +106,7 @@ En esta segunda práctica del taller aplicaremos lo visto sobre el lenguaje Ruby
     # => "admin@example.org (Administrador)"
     ```
 
-8.  ¿Qué diferencia hay entre el uso deincludeyextenda la hora de incorporar un módulo en una clase?
+8.  ¿Qué diferencia hay entre el uso de `include` y `extend` a la hora de incorporar un módulo en una clase?
 
     1. Si quisieras usar un módulo para agregar métodos de instancia a una clase, ¿qué forma usarías a la hora de incorporar el módulo a la clase?
     2. Si en cambio quisieras usar un módulo para agregar métodos de clase, ¿qué forma usarías en ese caso?

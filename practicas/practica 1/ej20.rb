@@ -1,7 +1,7 @@
 def multiplos_de_3_y_5(tope)
     suma = 0
-    veces = (tope / 15) + 1
-    veces.times do |index|
+    veces = (tope / 15)
+    1.upto(veces) do |index|
         suma += (index * 15)
     end
     return suma
