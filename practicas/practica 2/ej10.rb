@@ -57,7 +57,6 @@ puts "Array 'push' invocation count: #{arr.invoked(:push)}"
 
 saludo = Saludar.new
 saludo.hola
-saludo.adios
 saludo.hola
 
 puts "Saludar 'hola' invoked? #{saludo.invoked?(:hola)}"
