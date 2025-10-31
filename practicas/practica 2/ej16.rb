@@ -1,8 +1,6 @@
 def procesar_hash(hash, proc)
     new_hash = { }
-    hash.each do |key, value|
-        new_hash[key] = proc[value]
-    end
+    hash.each { |key, value|; new_hash[key] = proc[value] }
     new_hash
 end
 
